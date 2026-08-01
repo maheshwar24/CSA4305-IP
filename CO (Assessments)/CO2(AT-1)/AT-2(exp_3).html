@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>CSS Debugging</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+}
+
+
+.container{
+
+display:flex;
+gap:20px;
+padding:30px;
+
+}
+
+
+.box{
+
+flex:1;
+background:white;
+padding:30px;
+
+border-radius:10px;
+
+box-shadow:0 0 10px gray;
+
+text-align:center;
+
+}
+
+
+@media(max-width:600px){
+
+.container{
+flex-direction:column;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<h1 align="center">Responsive Boxes</h1>
+
+
+<div class="container">
+
+<div class="box">
+<h2>Box 1</h2>
+<p>No Overlapping</p>
+</div>
+
+
+<div class="box">
+<h2>Box 2</h2>
+<p>Flex Layout</p>
+</div>
+
+
+<div class="box">
+<h2>Box 3</h2>
+<p>Responsive Design</p>
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

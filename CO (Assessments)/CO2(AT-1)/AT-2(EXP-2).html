@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Email and Phone Validation</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f2f2f2;
+}
+
+form{
+    background:white;
+    width:320px;
+    padding:25px;
+    margin:50px auto;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#0077b6;
+    color:white;
+    border:none;
+}
+
+.message{
+    font-size:14px;
+}
+
+.valid{
+    color:green;
+}
+
+.invalid{
+    color:red;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<form>
+
+<h2>Registration Form</h2>
+
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter Email">
+
+<p id="emailMsg" class="message"></p>
+
+
+
+<label>Phone Number</label>
+<input type="tel" id="phone" placeholder="Enter 10 digit number">
+
+<p id="phoneMsg" class="message"></p>
+
+
+
+<button type="button" onclick="validate()">Submit</button>
+
+
+</form>
+
+
+
+<script>
+
+function validate(){
+
+let email=document.getElementById("email").value;
+let phone=document.getElementById("phone").value;
+
+
+let emailPattern=/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+let phonePattern=/^[0-9]{10}$/;
+
+
+
+if(emailPattern.test(email)){
+    emailMsg.innerHTML="✔ Valid Email";
+    emailMsg.className="valid";
+}
+else{
+    emailMsg.innerHTML="✘ Invalid Email";
+    emailMsg.className="invalid";
+}
+
+
+
+if(phonePattern.test(phone)){
+    phoneMsg.innerHTML="✔ Valid Phone Number";
+    phoneMsg.className="valid";
+}
+else{
+    phoneMsg.innerHTML="✘ Invalid Phone Number";
+    phoneMsg.className="invalid";
+}
+
+}
+
+</script>
+
+
+</body>
+
+</html>
